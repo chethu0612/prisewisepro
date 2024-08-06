@@ -102,7 +102,7 @@ const ProductDetails = async ({ params: { id } }: Props) => {
                     height={16}
                   />
                   <p className="text-sm text-primary-orange font-semibold">
-                    {product.stars || '25'}
+                    {product.stars || '4.5'}
                   </p>
                 </div>
 
@@ -161,8 +161,8 @@ const ProductDetails = async ({ params: { id } }: Props) => {
             Product Description
           </h3>
 
-          <div className="flex flex-col gap-4">
-            {product?.description?.split('\n')}
+          <div className="flex flex-col p-3 rounded-3xl gap-4 text-black font-mono border-dotted border-4 border-sky-200">
+            {product?.description?.split('\n').slice(0,50)}
           </div>
         </div>
 
